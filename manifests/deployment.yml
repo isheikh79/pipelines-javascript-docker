@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: isheikhpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: isheikhpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: isheikhpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: isheikhpipelinesjavascriptdocker 
+          image: tutchcontainerregistry.azurecr.io/isheikhpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
